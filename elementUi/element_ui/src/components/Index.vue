@@ -2,7 +2,7 @@
   <div id="app">
         <el-container style="height: 500px; border: 1px solid #eee">
           <el-aside width="200px" style="background-color: rgb(238, 241, 246)">
-            <el-menu router default-openeds="['0', '1']" >
+            <el-menu router :default-openeds="['0', '1']">
     <!--          <el-submenu index="1">-->
     <!--            <template slot="title"><i class="el-icon-message"></i>导航一</template>-->
     <!--            <el-menu-item-group>-->

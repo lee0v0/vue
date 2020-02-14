@@ -1,13 +1,11 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import PageOne from "../components/PageOne";
-import PageTwo from "../components/PageTwo";
-import PageThree from "../components/PageThree";
-import PageFour from "../components/PageFour";
+import BookMangement from "../components/BookMangement";
+import BoookAdd from "../components/BoookAdd";
 import App from "../App";
 import Index from "../components/Index";
-
+import BookUpdate from "../components/BookUpdate";
 Vue.use(Router)
 
 export default new Router({
@@ -16,40 +14,45 @@ export default new Router({
 
     {
       path: '/',
-      name: '导航1',
+      name: '图书管理',
       component: Index,
-      redirect:"/PageOne",
+      redirect:"/BookManagement",
       children:[
         {
-          path: '/PageOne',
-          name: '页面1',
-          component: PageOne
+          path: '/BookManagement',
+          name: '管理图书',
+          component: BookMangement
         },
         {
-          path: '/PageTwo',
-          name: '页面2',
-          component: PageTwo
-        }
-      ]
-    },
-
-    {
-      path: '/navigation2',
-      name: '导航2',
-      component: Index,
-      children:[
-        {
-          path: '/PageThree',
-          name: '页面3',
-          component: PageThree
+          path: '/BookAdd',
+          name: '添加图书',
+          component: BoookAdd
         },
         {
-          path: '/PageFour',
-          name: '页面4',
-          component: PageFour
+          path: '/BookUpdate',
+          name: '修改图书',
+          component: BookUpdate
         }
       ]
     }
+
+    // {
+    //   path: '/navigation2',
+    //   name: '导航2',
+    //   component: Index,
+    //   children:[
+    //     {
+    //       path: '/PageThree',
+    //       name: '页面3',
+    //       component: PageThree
+    //     },
+    //     {
+    //       path: '/PageFour',
+    //       name: '页面4',
+    //       component: PageFour
+    //     }
+    //   ]
+    // }
 
 
   ]
